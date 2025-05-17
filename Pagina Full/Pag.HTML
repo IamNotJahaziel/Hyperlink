@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HyperLink - Descargas de Sistemas Operativos</title>
+    <link rel="icon" type="image/png" href="Hyperlink.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
+    <style>
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('Minecraft.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .download-image {
+            width: 100%; /* Ajusta las imágenes al ancho del contenedor */
+            height: auto; /* Mantiene la proporción de las imágenes */
+            max-height: 200px; /* Limita la altura máxima para uniformidad */
+            object-fit: contain; /* Asegura que las imágenes no se deformen */
+        }
+
+        .header {
+            position: static; /* Cambiar de fijo a estático */
+            width: 100%;
+            background: linear-gradient(90deg, #007bff, #48b61c);
+            color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin: 0;
+            font-family: 'Minecraft', 'Pacifico-Regular', sans-serif;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0 #222, 4px 4px 8px #0006;
+        }
+
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .header nav a:hover {
+            color: #ffcc00; /* Mantener el color amarillo en hover */
+        }
+
+        .header + * {
+            margin-top: 0; /* Eliminar margen superior adicional */
+        }
+
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ffcc00;
+            color: #333333;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.1);
+            background: #333333;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HyperLink</h1>
+        <nav>
+            <a href="#sistemas-normales">Sistemas Normales</a>
+            <a href="#sistemas-optimizados">Sistemas Optimizados</a>
+            <a href="#software-adicional">Software Adicional</a>
+            <a href="#otros-juegos">Juegos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+
+<audio autoplay loop>
+    <source src="Musica De Fondo/Can You Hear The Music.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+    <button class="btn" onclick="toggleMode()">Modo Diurno 🌞 / 🌙 Modo Nocturno</button>
+    <div class="banner">    
+        <img src="HyperLinkBanner.gif" alt="HyperLink Banner">
+    </div>
+
+    <div class="container">
+        <h1>Bienvenidos a HyperLink 🎉</h1>
+        <p>Tu sitio de descargas más confiable y seguro. 🔒</p>
+
+        <div class="download-section">
+            <h2 id="sistemas-normales">Sistemas Normales 💻</h2>
+            <div class="row">
+                <div class="col-md-6 download-item">
+                    <img src="Iconos/windows 10.png" alt="Windows 10" class="download-image">
+                    <a href="https://www.microsoft.com/es-es/software-download/windows10" class="btn" target="_blank"><i class="fa-brands fa-windows"></i> Descargar Windows 10</a>
+                </div>
+                <div class="col-md-6 download-item">
+                    <img src="Iconos/windows-11.png" alt="Windows 11" class="download-image">
+                    <a href="https://www.microsoft.com/es-es/software-download/windows11" class="btn" target="_blank"><i class="fa-brands fa-windows"></i> Descargar Windows 11</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2 id="sistemas-optimizados">Sistemas Optimizados ⚙️</h2>
+            <div class="row">
+                <div class="col-md-6 download-item">
+                    <img src="Iconos/Winter OS.jpg" alt="WinterOS" class="download-image">
+                    <a href="https://www.mediafire.com/file/20wakgwig0wbz7f/WinterOS_11.iso/file" class="btn" target="_blank"><i class="fa-solid fa-microchip"></i> Descargar WinterOS</a>
+                </div>
+                <div class="col-md-6 download-item">
+                    <img src="Iconos/KernelOS.png" alt="KernelOS" class="download-image">
+                    <a href="https://www.mediafire.com/file/7ip8gtlrxepb7d7/KernelOS10_22H2_AiOv1.2.iso/file" class="btn" target="_blank"><i class="fa-solid fa-microchip"></i> Descargar KernelOS</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2 id="software-adicional">Software Adicional 📦</h2>
+            <div class="row">
+                <div class="col-md-6 download-item">
+                    <img src="Iconos/Office.png" alt="Office Pack" class="download-image">
+                    <a href="https://www.mediafire.com/file/m15yd8vt3e1gguu/Office_2013-2024.rar/file" class="btn" target="_blank"><i class="fa-solid fa-file"></i> Descargar Office Pack</a>
+                </div>
+                <div class="col-md-6 download-item">
+                    <img src="Iconos/rob-launcher.png" alt="RobLauncher" class="download-image">
+                    <a href="https://www.mediafire.com/file/yt9pruaf4klymmy/RobLauncher.Release.V1.91.zip/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar RobLauncher</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2 id="otros-juegos">Juegos 🎮</h2>
+            <div class="row">
+                <!-- Juegos de Need for Speed (antes en su propia sección) -->
+                <div class="col-md-6 download-item">
+                    <img src="Iconos/need for speed.png" alt="Need for Speed: Most Wanted" class="download-image">
+                    <a href="https://www.mediafire.com/file/5t5gcsg9gkh5s1m/Need_for_Speed_Most_Wanted.zip/file" class="btn" target="_blank"><i class="fa-solid fa-car"></i> Descargar Need for Speed: Most Wanted (2005)</a>
+                </div>
+                <div class="col-md-6 download-item">
+                    <img src="Iconos/Need For Speed (2012).png" alt="Need For Speed" class="download-image">
+                    <a href="https://www.mediafire.com/file/nuevo-juego.zip/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Need For Speed (2012)</a>
+                </div>
+                <!-- Juego 1 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/GTA SA.jpg" alt="GTA SA" class="download-image">
+                    <a href="https://www.mediafire.com/file/almwg0qp68322mk/Gta_San_Andreas_1.0.rar/file" class="btn" target="_blank"><i class="fa-solid fa-car"></i> Descargar GTA SAN ANDREAS</a>
+                </div>
+                <!-- Juego 2 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/csgo1.6.jpg" alt="Counter Strike" class="download-image">
+                    <a href="https://www.mediafire.com/file/5yl4k4ospdy3ozp/Counter+Strike+1.6.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Counter Strike 1.6</a>
+                </div>
+                <!-- Juego 3 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/blur.png" alt="Blur" class="download-image">
+                    <a href="https://www.mediafire.com/file/k1z1c1nbfmnxzyu/Bluww.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Blur</a>
+                </div>
+                <!-- Juego 4 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Mk1.png" alt="Mortal Kombat" class="download-image">
+                    <a href="https://www.mediafire.com/file/zhr8q4kalc2ynok/MTK1www.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Mortal Kombat</a>
+                </div>
+                <!-- Juego 5 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/mk2.png" alt="Mortal Kombat 2" class="download-image">
+                    <a href="https://www.mediafire.com/file/1not8g2yei6x7un/MOTK2www.randrogames.com.rar/file" class="btn" target="_blank"><i lass="fa-solid fa-gamepad"></i> Descargar Mortal Kombat 2</a>
+                </div>
+                <!-- Juego 6 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/mk3.png" alt="Mortal Kombat 3" class="download-image">
+                    <a href="https://www.mediafire.com/file/v8o2aw3794ui1cp/MOTK3www.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Mortal Kombat 3</a>
+                </div>
+                <!-- Juego 7 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/mk4.png" alt="Mortal Kombat 4" class="download-image">
+                    <a href="https://www.mediafire.com/file/kfdson92qc4fk3r/MOTK4www.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Mortal Kombat 4</a>
+                </div>
+                <!-- Juego 8 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Terraria Portada.jpg" alt="Terraria" class="download-image">
+                    <a href="https://www.mediafire.com/file/1wgaj8e5p17yekr/TRRIAwww.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Terraria</a>
+                </div>
+                <!-- Juego 9 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/HelloNeighbor.jpg" alt="Hello Neighbor" class="download-image">
+                    <a href="https://www.mediafire.com/file/1wfbv6w0oe35zdf/H3llNeig3tB00rwww.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Hello Neighbor</a>
+                </div>
+                <!-- Juego 10 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Cuphead.png" alt="CupHead" class="download-image">
+                    <a href="https://www.mediafire.com/file/0x17ycw5l71ze73/Cuphead.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar CupHead</a>
+                </div>
+                <!-- Juego 11 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/DarkSoulsRemaster.png" alt="Dark Souls: Remastered" class="download-image">
+                    <a href="https://www.mediafire.com/file/e03kpi3wx1zrrj6/Darky_Sauce.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Dark Souls: Remastered</a>
+                </div>
+                <!-- Juego 12 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/DarkSouls2.jpg" alt="Dark Souls II: Scholar of the First Sin" class="download-image">
+                    <a href="https://www.mediafire.com/file/tu03gv8ypwslnfz/Dark+Souls+II.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Dark Souls II: Scholar of the First Sin</a>
+                </div>
+                <!-- Juego 13 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Portal.jpg" alt="Portal" class="download-image">
+                    <a href="https://www.mediafire.com/file/v7ikkrk9u47jxcg/potlwww.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Portal</a>
+                </div>
+                <!-- Juego 14 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Portal 2.jpg" alt="Portal 2" class="download-image">
+                    <a href="https://www.mediafire.com/file/qjq2vtdcshyfcel/prt2www.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar Portal 2</a>
+                </div>
+                <!-- Juego 15 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Need For Speed Hot Pursuit 2010.jpg" alt="NFS: Hot Persuit 2010" class="download-image">
+                    <a href="https://www.mediafire.com/file/q4burwaxtw748yi/Need+for+Speed+Hot+Pursuit+2010www.randrogames.com.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar NFS: Hot Persuit 2010</a>
+                </div>
+                <!-- Juego 16 -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Need For Speed Carbon.jpg" alt="NFS: Carbon" class="download-image">
+                    <a href="https://www.mediafire.com/file/pe2wk7bolutjzky/N4Speed_Carbon.rar/file" class="btn" target="_blank"><i class="fa-solid fa-gamepad"></i> Descargar NFS: Carbon</a>
+                </div>
+                <!-- Juego A -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/undertale Portada.jpg" alt="Undertale" class="download-image">
+                    <a href="https://www.mediafire.com/file/shyrejzf7cr2tc2/undertwww.randrogames.com.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Undertale
+                    </a>
+                </div>
+                <!-- Juego B -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Resident evil 3 Portada.jpg" alt="Resident Evil 3 Nemesis" class="download-image">
+                    <a href="https://www.mediafire.com/file/dh3gnckqmzup69j/RE3Nemerandrogames.com.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Resident Evil 3 Nemesis
+                    </a>
+                </div>
+                <!-- Juego C -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Resident Evil 4 Portada.jpg" alt="Resident Evil 4" class="download-image">
+                    <a href="https://www.mediafire.com/file/4ywd9hypndanjiy/Resident_Evil_4.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Resident Evil 4
+                    </a>
+                </div>
+                <!-- Juego D -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Resident Evil 5 Portada.jpg" alt="Resident Evil 5 Gold Edition" class="download-image">
+                    <a href="https://www.mediafire.com/file/jxgtsevf48h4e5y/Resident+Evil+5+Gold+Edition+1.1.0.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Resident Evil 5 Gold Edition
+                    </a>
+                </div>
+                <!-- Juego E -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Resident evil 6 Portada.jpg" alt="Resident Evil 6" class="download-image">
+                    <a href="https://www.mediafire.com/file/g5akg73bewqa4j9/Revil6randrogames.com.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Resident Evil 6
+                    </a>
+                </div>
+                <!-- Juego F -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Resident evil Zero.jpg" alt="Resident Evil Zero HD Remaster" class="download-image">
+                    <a href="https://www.mediafire.com/file/jxb89zf0jhoqqmx/Resident+Evil+0+HD+Remaster-randrogames.com.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Resident Evil Zero HD Remaster
+                    </a>
+                </div>
+                <!-- Juego G -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Sons Of The Forest Portada.jpg" alt="Sons Of The Forest" class="download-image">
+                    <a href="https://www.mediafire.com/file/vt2mj8svrg7jhv4/Sons_of_The_Forestwww.randrogames.com.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Sons Of The Forest
+                    </a>
+                </div>
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Streamer Life Simulator 2.jpg" alt="Streamer Life Simulator 2" class="download-image">
+                    <a href="https://www.mediafire.com/file/c3t3805xqsit7fc/SLS2Gamewww.randrogames.com.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Streamer Life Simulator 2
+                    </a>
+                </div>
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/The Forest.png" alt="The Forest" class="download-image">
+                    <a href="https://www.mediafire.com/file/lsqsj5gxokp0lar/Th3F0rest.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar The Forest
+                    </a>
+                </div>  
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Need For Speed Prostreet.jpg" alt="Need For Speed: ProStreet" class="download-image">
+                    <a href="https://www.mediafire.com/file/na056r4xkqkvmlh/Need+for+Speed+ProStreetwww.randrogames.com.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Need For Speed: ProStreet
+                    </a>
+                </div>
+                <!-- Juego extra -->
+                <div class="col-md-4 download-item">
+                    <img src="Iconos/Need For Speed Undercover Portada.jpg" alt="Need For Speed: Undercover" class="download-image">
+                    <a href="https://www.mediafire.com/file/ks93l0agr9dua7b/Need+for+Speed+Undercoverwww.randrogames.com.rar/file" class="btn" target="_blank">
+                        <i class="fa-solid fa-gamepad"></i> Descargar Need For Speed: Undercover
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sobre-funcionamiento">
+            <h2>HighLights 🎥</h2>
+            <div class="video-container">
+                <video autoplay loop muted>
+                    <source src="Videos/Hyperlink Video (1).mp4" type="video/mp4">
+                    Tu computadora es una papa, no lo aguanta asi q comprate otra bro :D.
+                </video>
+            </div>
+        </div>
+
+        <div class="container mt-5" id="contacto">
+            <h2>Contáctanos 📩</h2>
+            <p>¿Tienes dudas o necesitas soporte? Escribe tu mensaje y te atenderé por WhatsApp.</p>
+            <form id="whatsapp-form" style="max-width:500px; margin:auto;">
+                <div class="mb-3">
+                    <label for="whatsapp-message" class="form-label">Tu mensaje para HyperLink:</label>
+                    <textarea id="whatsapp-message" class="form-control" rows="3" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <button type="submit" class="btn btn-success" style="font-size:1.2rem;display:inline-flex;align-items:center;gap:8px;">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
+                    </button>
+                </div>
+            </form>
+            <p style="margin-top:10px;font-size:0.95rem;color:#e11515;">
+                Sigo Expandiendo la página, agradezco tu apoyo mucho! 🤗
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; HyperLink Copyright 2025 🌐</p>
+        </div>
+    </div>
+
+    <button class="contact-button" onclick="scrollToContact()">📩</button>
+
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        window.onload = function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.classList.add(savedTheme);
+            } else {
+                document.body.classList.add('dark-mode'); // Modo nocturno por defecto
+            }
+        };
+
+        document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const message = encodeURIComponent(document.getElementById('whatsapp-message').value.trim());
+            if (message) {
+                window.open(`https://wa.me/18298578224?text=${message}`, '_blank');
+            }
+        });
+
+        function scrollToContact() {
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>
